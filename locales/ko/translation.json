@@ -1,5 +1,36 @@
 {
   "menu": {
-    "runners": "러너즈"
+    "dashboard_t": "대쉬보드",
+    "steemit_t": "스팀잇",
+    "steemit": {
+      "create_account": "계정 생성"
+    },
+    "game_t": "게임",
+    "game": {
+      "steem_runners": "스팀 러너즈"
+    },
+    "spt_t": "스플린터랜즈",
+    "spt": {
+      "coin_price": "코인 가격",
+      "token_list": "토큰 목록",
+      "cards_t": "카드",
+      "cards": {
+        "delegated": "임대 목록",
+        "rented": "임차 목록",
+        "quest_rewards": "퀘스트 보상"
+      }
+    },
+    "about_t": "만든이"
+  },
+  "message_t": "메시지",
+  "message": {
+    "received": "수신함",
+    "send": "보내기"
+  },
+  "settings_t": "설정",
+  "settings": {
+    "profile": "프로필",
+    "logout": "로그아웃",
+    "login": "로그인"
   }
 }

@@ -1,5 +1,36 @@
 {
   "menu": {
-    "runners": "RUNNERS"
+    "dashboard_t": "Dashboard",
+    "steemit_t": "STEEMIT",
+    "steemit": {
+      "create_account": "Create Account"
+    },
+    "game_t": "GAME",
+    "game": {
+      "steem_runners": "Steem Runners"
+    },
+    "spt_t": "SPLINTERLANDS",
+    "spt": {
+      "coin_price": "Coin Price",
+      "token_list": "Token List",
+      "cards_t": "Cards",
+      "cards": {
+        "delegated": "Delegated",
+        "rented": "Rented",
+        "quest_rewards": "Quest Rewards"
+      }
+    },
+    "about_t": "About"
+  },
+  "message_t": "Message",
+  "message": {
+    "received": "Received",
+    "send": "Send"
+  },
+  "settings_t": "Settings",
+  "settings": {
+    "profile": "Profile",
+    "logout": "Logout",
+    "login": "Login"
   }
 }

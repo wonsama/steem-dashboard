@@ -5,99 +5,53 @@ header.header.header-sticky.mb-4
         use(xlink:href="svg/free.svg#cil-menu")
         |
     a.header-brand.d-md-none(href="#")
-      svg(width="118" height="46" alt="CoreUI Logo")
-        use(xlink:href="assets/brand/coreui.svg#full")
+      img(src='images/logo.png' alt="wonsama logo" width="118" height="46")
         |
     ul.header-nav.d-none.d-md-flex
       li.nav-item
-        a.nav-link(href="#") Dashboard
+        a.nav-link(href="#") #{t("menu.dashboard_t")}
       li.nav-item
-        a.nav-link(href="#") Users
+        a.nav-link(href="#") #{t("menu.steemit.create_account")}
       li.nav-item
-        a.nav-link(href="#") Settings
+        a.nav-link(href="#") #{t("menu.game.steem_runners")}
     ul.header-nav.ms-auto
       li.nav-item
         a.nav-link(href="#")
           svg.icon.icon-lg
             use(xlink:href="svg/free.svg#cil-bell")
             |
-      li.nav-item
-        a.nav-link(href="#")
-          svg.icon.icon-lg
-            use(xlink:href="svg/free.svg#cil-list-rich")
-            |
-      li.nav-item
-        a.nav-link(href="#")
-          svg.icon.icon-lg
-            use(xlink:href="svg/free.svg#cil-envelope-open")
-            |
     ul.header-nav.ms-3
       li.nav-item.dropdown
         a.nav-link.py-0(data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false")
           .avatar.avatar-md
-            img.avatar-img(src="assets/img/avatars/8.jpg" alt="user@email.com")
+            img.avatar-img(src="https://steemitimages.com/u/wonsama/avatar" alt="user@email.com")
         .dropdown-menu.dropdown-menu-end.pt-0
           .dropdown-header.bg-light.py-2
-            .fw-semibold Account
-          a.dropdown-item(href="#")
-            svg.icon.me-2
-              use(xlink:href="svg/free.svg#cil-bell")
-              |
-            |  Updates
-            span.badge.badge-sm.bg-info.ms-2 42
+            .fw-semibold #{t("message_t")}
           a.dropdown-item(href="#")
             svg.icon.me-2
               use(xlink:href="svg/free.svg#cil-envelope-open")
               |
-            |  Messages
-            span.badge.badge-sm.bg-success.ms-2 42
+            |  #{t("message.received")}
+            span.badge.badge-sm.bg-success.ms-2 3
           a.dropdown-item(href="#")
             svg.icon.me-2
-              use(xlink:href="svg/free.svg#cil-task")
+              use(xlink:href="svg/free.svg#cil-envelope-open")
               |
-            |  Tasks
-            span.badge.badge-sm.bg-danger.ms-2 42
-          a.dropdown-item(href="#")
-            svg.icon.me-2
-              use(xlink:href="svg/free.svg#cil-comment-square")
-              |
-            |  Comments
-            span.badge.badge-sm.bg-warning.ms-2 42
+            |  #{t("message.send")}
           .dropdown-header.bg-light.py-2
-            .fw-semibold Settings
+            .fw-semibold #{t("settings_t")}
           a.dropdown-item(href="#")
             svg.icon.me-2
               use(xlink:href="svg/free.svg#cil-user")
               |
-            |  Profile
-          a.dropdown-item(href="#")
-            svg.icon.me-2
-              use(xlink:href="svg/free.svg#cil-settings")
-              |
-            |  Settings
-          a.dropdown-item(href="#")
-            svg.icon.me-2
-              use(xlink:href="svg/free.svg#cil-credit-card")
-              |
-            |  Payments
-            span.badge.badge-sm.bg-secondary.ms-2 42
-          a.dropdown-item(href="#")
-            svg.icon.me-2
-              use(xlink:href="svg/free.svg#cil-file")
-              |
-            |  Projects
-            span.badge.badge-sm.bg-primary.ms-2 42
+            |  #{t("settings.profile")}
           .dropdown-divider
-          a.dropdown-item(href="#")
-            svg.icon.me-2
-              use(xlink:href="svg/free.svg#cil-lock-locked")
-              |
-            |  Lock Account
           a.dropdown-item(href="#")
             svg.icon.me-2
               use(xlink:href="svg/free.svg#cil-account-logout")
               |
-            |  Logout
+            |  #{t("settings.logout")}
   .header-divider
   .container-fluid
     block breadcrumb

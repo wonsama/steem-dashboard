@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>chart</title>
+  </head>
+  <body>
+    <div>
+      <canvas id="myChart"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      function getDays(num, prefix = "DAY ") {
+        let buffer = [];
+        for (let i = 0; i < num; i++) {
+          buffer.push(`${prefix} ${i + 1}`);
+        }
+        return buffer;
+      }
+      function accArray(nums) {
+        let buffer = 0;
+        let acc = [];
+        for (let i = 0; i < nums.length; i++) {
+          buffer = nums[i] + buffer;
+          acc.push(buffer);
+        }
+        return acc;
+      }
+      var dynamicColors = function () {
+        var r = Math.floor(Math.random() * 255);
+        var g = Math.floor(Math.random() * 255);
+        var b = Math.floor(Math.random() * 255);
+        return "rgb(" + r + "," + g + "," + b + ")";
+      };
+      var rnd = (max = 10) => Math.floor(Math.random() * max) + 0;
+    </script>
+    <script>
+      const labels = getDays(7);
+      // var yourImage = new Image();
+      // yourImage.src = "https://steemitimages.com/u/wonsama/avatar";
+      // yourImage.width = 8;
+      // yourImage.height = 8;
+      const data = {
+        labels: labels,
+        datasets: [
+          {
+            label: "wonsama",
+            backgroundColor: dynamicColors(),
+            borderColor: dynamicColors(),
+            data: accArray([rnd(), rnd(), rnd(), rnd(), rnd(), rnd(), rnd()]),
+            // pointRadius: [20, 20, 20, 20, 20, 20, 20],
+            // pointStyle: ["", "", "", "", "", "", yourImage],
+          },
+          {
+            label: "glory7",
+            backgroundColor: dynamicColors(),
+            borderColor: dynamicColors(),
+            data: accArray([rnd(), rnd(), rnd(), rnd(), rnd(), rnd(), rnd()]),
+          },
+          {
+            label: "donekim",
+            backgroundColor: dynamicColors(),
+            borderColor: dynamicColors(),
+            data: accArray([rnd(), rnd(), rnd(), rnd(), rnd(), rnd(), rnd()]),
+          },
+        ],
+      };
+
+      console.log(accArray([1, 2, 3, 4, 5]));
+
+      const config = {
+        type: "line",
+        data: data,
+        options: {
+          plugins: {
+            tooltip: {
+              callbacks: {
+                label: function (context) {
+                  let items = context.dataset.data;
+                  if (context.dataIndex > 0) {
+                    return `CUR : ${
+                      items[context.dataIndex] - items[context.dataIndex - 1]
+                    }, SUM : ${context.raw}`;
+                  } else {
+                    return `CUR : ${context.raw}, SUM : ${context.raw}`;
+                  }
+                },
+                title: function (contexts) {
+                  // let items = context.dataset.data;
+                  // console.log(context);
+                  let buffer = [];
+                  for (let i = 0; i < contexts.length; i++) {
+                    buffer.push(
+                      `${contexts[i].label} - ${contexts[i].dataset.label}`
+                    );
+                  }
+                  return buffer;
+                },
+              },
+            },
+          },
+        },
+      };
+      const myChart = new Chart(document.getElementById("myChart"), config);
+    </script>
+  </body>
+</html>
