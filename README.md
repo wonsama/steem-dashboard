@@ -28,3 +28,5 @@ pm2 `start` 는 기동 시 현재 폴더의 ecosystem.config.js 를 참조함
 [docs:coreui](https://coreui.io/docs/getting-started/introduction/)
 [i18next-http-middleware](https://npm.io/package/i18next-http-middleware)
 [i18n:참조](https://lokalise.com/blog/node-js-i18n-express-js-localization/)
+[svgsprit](https://svgsprit.es/)
+[svg-icon](https://junojunho.com/front-end/svg-icon)

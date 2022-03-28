@@ -9,7 +9,7 @@ router.get("/", function (req, res, next) {
   var lngs = req.languages;
   console.log("🚀 ~ file: index.js ~ line 10 ~ lngs", lngs);
 
-  res.render("index", { title: "Express" });
+  res.render("index", { logined: false });
 });
 
 module.exports = router;

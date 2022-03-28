@@ -29,7 +29,10 @@
   },
   "settings_t": "설정",
   "settings": {
-    "profile": "프로필",
+    "profile": "프로필"
+  },
+  "account_t": "계정",
+  "account": {
     "logout": "로그아웃",
     "login": "로그인"
   }

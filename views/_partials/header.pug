@@ -15,43 +15,51 @@ header.header.header-sticky.mb-4
       li.nav-item
         a.nav-link(href="#") #{t("menu.game.steem_runners")}
     ul.header-nav.ms-auto
-      li.nav-item
-        a.nav-link(href="#")
-          svg.icon.icon-lg
-            use(xlink:href="svg/free.svg#cil-bell")
-            |
+      //- li.nav-item
+      //-   a.nav-link(href="#")
+      //-     svg.icon.icon-lg
+      //-       use(xlink:href="svg/free.svg#cil-bell")
+      //-       |
     ul.header-nav.ms-3
       li.nav-item.dropdown
         a.nav-link.py-0(data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false")
           .avatar.avatar-md
-            img.avatar-img(src="https://steemitimages.com/u/wonsama/avatar" alt="user@email.com")
+            if logined
+              img.avatar-img(src="https://steemitimages.com/u/wonsama/avatar" alt="profile image")
+            else
+              +svg("svg/my.svg","user")
         .dropdown-menu.dropdown-menu-end.pt-0
+          //- .dropdown-header.bg-light.py-2
+          //-   .fw-semibold #{t("message_t")}
+          //- a.dropdown-item(href="#")
+          //-   svg.icon.me-2
+          //-     use(xlink:href="svg/free.svg#cil-envelope-open")
+          //-     |
+          //-   |  #{t("message.received")}
+          //-   span.badge.badge-sm.bg-success.ms-2 3
+          //- a.dropdown-item(href="#")
+          //-   svg.icon.me-2
+          //-     use(xlink:href="svg/free.svg#cil-envelope-open")
+          //-     |
+          //-   |  #{t("message.send")}
+          //- .dropdown-header.bg-light.py-2
+          //-   .fw-semibold #{t("settings_t")}
+          //- a.dropdown-item(href="#")
+          //-   svg.icon.me-2
+          //-     use(xlink:href="svg/free.svg#cil-user")
+          //-     |
+          //-   |  #{t("settings.profile")}
+          //- .dropdown-divider
           .dropdown-header.bg-light.py-2
-            .fw-semibold #{t("message_t")}
-          a.dropdown-item(href="#")
-            svg.icon.me-2
-              use(xlink:href="svg/free.svg#cil-envelope-open")
-              |
-            |  #{t("message.received")}
-            span.badge.badge-sm.bg-success.ms-2 3
-          a.dropdown-item(href="#")
-            svg.icon.me-2
-              use(xlink:href="svg/free.svg#cil-envelope-open")
-              |
-            |  #{t("message.send")}
-          .dropdown-header.bg-light.py-2
-            .fw-semibold #{t("settings_t")}
-          a.dropdown-item(href="#")
-            svg.icon.me-2
-              use(xlink:href="svg/free.svg#cil-user")
-              |
-            |  #{t("settings.profile")}
-          .dropdown-divider
+            .fw-semibold #{t("account_t")}          
           a.dropdown-item(href="#")
             svg.icon.me-2
               use(xlink:href="svg/free.svg#cil-account-logout")
               |
-            |  #{t("settings.logout")}
+            if logined
+              |  #{t("account.logout")}
+            else
+              |  #{t("account.login")}
   .header-divider
   .container-fluid
     block breadcrumb
