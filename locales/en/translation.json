@@ -1,4 +1,8 @@
 {
+  "badge": {
+    "preparing": "preparing",
+    "new": "new"
+  },
   "menu": {
     "dashboard_t": "Dashboard",
     "steemit_t": "STEEMIT",
@@ -22,18 +26,20 @@
     },
     "about_t": "About"
   },
-  "message_t": "Message",
-  "message": {
-    "received": "Received",
-    "send": "Send"
-  },
-  "settings_t": "Settings",
-  "settings": {
-    "profile": "Profile"
-  },
-  "account_t": "Account",
-  "account": {
-    "logout": "Logout",
-    "login": "Login"
+  "user": {
+    "message_t": "Message",
+    "message": {
+      "received": "Received",
+      "send": "Send"
+    },
+    "settings_t": "Settings",
+    "settings": {
+      "profile": "Profile"
+    },
+    "account_t": "Account",
+    "account": {
+      "logout": "Logout",
+      "login": "Login"
+    }
   }
 }

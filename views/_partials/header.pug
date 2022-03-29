@@ -51,15 +51,15 @@ header.header.header-sticky.mb-4
           //-   |  #{t("settings.profile")}
           //- .dropdown-divider
           .dropdown-header.bg-light.py-2
-            .fw-semibold #{t("account_t")}          
+            .fw-semibold #{t("user.account_t")}          
           a.dropdown-item(href="#")
             svg.icon.me-2
               use(xlink:href="svg/free.svg#cil-account-logout")
               |
             if logined
-              |  #{t("account.logout")}
+              |  #{t("user.account.logout")}
             else
-              |  #{t("account.login")}
+              |  #{t("user.account.login")}
   .header-divider
   .container-fluid
     block breadcrumb

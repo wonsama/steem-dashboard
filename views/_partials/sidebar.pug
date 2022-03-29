@@ -5,59 +5,57 @@
     img.sidebar-brand-narrow.avatar-img(src="https://steemitimages.com/u/wonsama/avatar" alt="wonsama logo mini")
   ul.sidebar-nav(data-coreui="navigation" data-simplebar)
     li.nav-item
-      a.nav-link(href='index.html')
+      a.nav-link(href='/')
         svg.nav-icon
           use(xlink:href="svg/free.svg#cil-speedometer")
         |  #{t("menu.dashboard_t")}
     li.nav-title
       | #{t("menu.steemit_t")}
     li.nav-item
-      a.nav-link(href='colors.html')
-        svg.nav-icon
-          use(xlink:href="svg/free.svg#cil-drop")
+      a.nav-link(href='#!')
+        +svg("svg/free.svg", "cil-chart-pie")(class="nav-icon")
         |  #{t("menu.steemit.create_account")}
+        span.badge.badge-sm.bg-secondary.ms-auto #{t("badge.preparing")}
     li.nav-title
       | #{t("menu.game_t")}
     li.nav-item
-      a.nav-link(href='charts.html')
-        svg.nav-icon
-          use(xlink:href="svg/free.svg#cil-chart-pie")
+      a.nav-link(href='#!')
+        +svg("svg/free.svg", "cil-chart-pie")(class="nav-icon")
         |  #{t("menu.game.steem_runners")}
-        span.badge.badge-sm.bg-info.ms-auto NEW
+        span.badge.badge-sm.bg-info.ms-auto #{t("badge.new")}
     li.nav-title
-      | #{t("menu.spt_t")}
+      | #{t("menu.spt_t")}      
     li.nav-group
-      a.nav-link(href='charts.html')
-        svg.nav-icon
-          use(xlink:href="svg/free.svg#cil-chart-pie")
+      a.nav-link(href='#!')
+        +svg("svg/free.svg", "cil-chart-pie")(class="nav-icon")
         |  #{t("menu.spt.coin_price")}
-      a.nav-link(href='charts.html')
-        svg.nav-icon
-          use(xlink:href="svg/free.svg#cil-chart-pie")
+        span.badge.badge-sm.bg-secondary.ms-auto #{t("badge.preparing")}
+      a.nav-link(href='#!')
+        +svg("svg/free.svg", "cil-chart-pie")(class="nav-icon")
         |  #{t("menu.spt.token_list")}
+        span.badge.badge-sm.bg-secondary.ms-auto #{t("badge.preparing")}
       a.nav-link.nav-group-toggle(href='#')
-        svg.nav-icon
-          use(xlink:href="svg/free.svg#cil-star")
+        +svg("svg/free.svg", "cil-chart-pie")(class="nav-icon")
         |  #{t("menu.spt.cards_t")}
       ul.nav-group-items
         li.nav-item
-          a.nav-link(href='login.html' target="_top")
-            svg.nav-icon
-              use(xlink:href="svg/free.svg#cil-account-logout")
+          a.nav-link(href='#!' target="_top")
+            +svg("svg/free.svg", "cil-chart-pie")(class="nav-icon")
             |  #{t("menu.spt.cards.delegated")}
+            span.badge.badge-sm.bg-secondary.ms-auto #{t("badge.preparing")}
         li.nav-item
-          a.nav-link(href='register.html' target="_top")
-            svg.nav-icon
-              use(xlink:href="svg/free.svg#cil-account-logout")
+          a.nav-link(href='#!' target="_top")
+            +svg("svg/free.svg", "cil-chart-pie")(class="nav-icon")
             |  #{t("menu.spt.cards.rented")}
+            span.badge.badge-sm.bg-secondary.ms-auto #{t("badge.preparing")}
         li.nav-item
-          a.nav-link(href='register.html' target="_top")
-            svg.nav-icon
-              use(xlink:href="svg/free.svg#cil-account-logout")
+          a.nav-link(href='#!' target="_top")
+            +svg("svg/free.svg", "cil-chart-pie")(class="nav-icon")
             |  #{t("menu.spt.cards.quest_rewards")}
+            span.badge.badge-sm.bg-secondary.ms-auto #{t("badge.preparing")}
     li.nav-item.mt-auto
-      a.nav-link(href='docs.html')
-        svg.nav-icon
-          use(xlink:href="svg/free.svg#cil-description")
+      a.nav-link(href='#!')
+        +svg("svg/free.svg", "cil-chart-pie")(class="nav-icon")
         |  #{t("menu.about_t")}
+        span.badge.badge-sm.bg-secondary.ms-auto #{t("badge.preparing")}
   button.sidebar-toggler(type="button" data-coreui-toggle="unfoldable")

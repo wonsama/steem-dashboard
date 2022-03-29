@@ -2,6 +2,29 @@
 
 steem 용 대쉬보드, 다양한 기능을 추가 예정
 
+## STEEM RUNNERS
+
+1회 던지는데 10 STEEM
+
+[중요] Re:Run 을 할 경우 이전 숫자는 무시하게 됨. Max 값이 아님에 유의
+(이전 : 7, RE:Run : 3 이런 경우, 7이 아닌 3이 되게 됨.)
+
+당일자 - RE:Run
+
+10, 20, 30 40, 50 - 10 STEEM 씩 비용이 증가. ( 최대 5회 )
+
+지나간 날 - RE:Run
+
+20, 40, 80, 160, 320 - 2배 씩 비용이 증가. ( 최대 5회 )
+( 이전에 돌린, 당일자 RE:Run 횟수는 무시함 )
+
+단, NFT 보유자(또는 기부자)에게 할인 혜택 증정
+
+COMMON : - 1 STEEM
+RARE : - 3 STEEM
+EPIC : - 5 STEEM
+LEGENDARY : - 10 STEEM
+
 ## 실행
 
 > pm2 start

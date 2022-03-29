@@ -1,4 +1,8 @@
 {
+  "badge": {
+    "preparing": "준비중",
+    "new": "신규"
+  },
   "menu": {
     "dashboard_t": "대쉬보드",
     "steemit_t": "스팀잇",
@@ -22,18 +26,20 @@
     },
     "about_t": "만든이"
   },
-  "message_t": "메시지",
-  "message": {
-    "received": "수신함",
-    "send": "보내기"
-  },
-  "settings_t": "설정",
-  "settings": {
-    "profile": "프로필"
-  },
-  "account_t": "계정",
-  "account": {
-    "logout": "로그아웃",
-    "login": "로그인"
+  "user": {
+    "message_t": "메시지",
+    "message": {
+      "received": "수신함",
+      "send": "보내기"
+    },
+    "settings_t": "설정",
+    "settings": {
+      "profile": "프로필"
+    },
+    "account_t": "계정",
+    "account": {
+      "logout": "로그아웃",
+      "login": "로그인"
+    }
   }
 }
