@@ -52,7 +52,7 @@ header.header.header-sticky.mb-4
           //- .dropdown-divider
           .dropdown-header.bg-light.py-2
             .fw-semibold #{t("user.account_t")}          
-          a.dropdown-item(href="#")
+          a.dropdown-item(href="#" id=logined?"btnLogout":"btnLogin")
             svg.icon.me-2
               use(xlink:href="svg/free.svg#cil-account-logout")
               |
